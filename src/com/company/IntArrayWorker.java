@@ -29,6 +29,22 @@ public class IntArrayWorker
     }
     return total;
   }
+
+  public int getLargest()
+  {
+      int largVal = 0;
+    for (int row = 0; row < matrix.length; row++)
+    {
+      for (int col = 0; col < matrix[0].length; col++)
+      {
+        if (matrix[row][col] > largVal)
+        {
+          largVal = matrix[row][col];
+        }
+      }
+    }
+    return largVal;
+  }
   
   /**
    * Method to return the total using a nested for-each loop
@@ -63,7 +79,34 @@ public class IntArrayWorker
       }
     }
   }
-  
+  public int getCount(int a)
+  {
+    int count = 0;
+    for (int row = 0; row < matrix.length; row++)
+    {
+      for (int col = 0; col< matrix[0].length; col++)
+      {
+        if (matrix[row][col] == a)
+        {
+          count ++;
+        }
+
+      }
+
+    }
+    return count;
+  }
+
+  public int getColTotal(int b)
+  {
+    int total = 0;
+    for (int row = 0; row<matrix.length; row++)
+    {
+        total = total + matrix[row][b];
+    }
+    return total;
+  }
+
   /**
    * print the values in the array in rows and columns
    */
