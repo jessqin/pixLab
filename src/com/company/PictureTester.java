@@ -18,6 +18,7 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -52,6 +53,34 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+  public static void testKeepOnlyBlue()
+  {
+    Picture koala = new Picture("koala.jpg");
+    koala.keepOnlyBlue();
+    koala.explore();
+  }
+
+  public static void testNegate()
+  {
+    Picture koala = new Picture("koala.jpg");
+    koala.negate();
+    koala.explore();
+  }
+
+  public static void testGrayscale()
+  {
+    Picture koala = new Picture("koala.jpg");
+    koala.grayscale();
+    koala.explore();
+  }
+
+  public static void testFixUnderwater()
+  {
+    Picture water = new Picture("water.jpg");
+    water.fixUnderwater();
+    water.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -60,13 +89,13 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
-    //testFixUnderwater();
+    testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
